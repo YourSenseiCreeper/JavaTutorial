@@ -5,11 +5,37 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import pl.gastherr.Car;
 
 public class DaneZPliku {
 
+	public static void menu() {
+		Scanner sc = new Scanner(System.in);
+		String[] menuOptions = new String[] {
+			"1. Sumowanie",
+			"2. Sortowanie",
+			"3. Niewy³apywalne wyj¹tki",
+			"4. Element poza rozmiarem",
+			"exit - wyjœcie"
+		};
+		for(String element : menuOptions) System.out.println(element);
+		String input = "";
+		do {
+			input = sc.nextLine();
+			switch(input) {
+			case "1": sumowanie(); break;
+			case "2": sortowanie(); break;
+			case "3": niewyplapywalneWyjatki(); break;
+			case "4": elementPozaRozmiarem(); break;
+			case "exit": break;
+			default:
+				System.out.println("Nie ma opcji: "+input);
+			}
+		} while(!input.equals("exit"));
+	}
+	
 	public static void sumowanie() {
 		ArrayList<String> lines = pobierzDane();
 		int result = 0;

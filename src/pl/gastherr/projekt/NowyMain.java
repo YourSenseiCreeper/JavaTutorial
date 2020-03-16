@@ -6,8 +6,7 @@ public class NowyMain {
 
 	public static void main(String[] args) {
 		//fibonacci();
-		//DaneZPliku.sumowanie();
-		DaneZPliku.elementPozaRozmiarem();
+		DaneZPliku.menu();
 	}
 	
 	public static void fibonacci() {
