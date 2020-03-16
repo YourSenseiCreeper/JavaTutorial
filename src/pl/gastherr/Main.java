@@ -2,6 +2,7 @@ package pl.gastherr;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Main {
 
@@ -9,6 +10,7 @@ public class Main {
 		// Paradygmaty jêzyka Java - wieloparadygmatowy
 		// OBIEKTOWE - (Object Oriented Programming OOP)
 		// Podstawowe za³o¿enia OOP
+		
 		
 		// 1. Abstrakcja 
 		// Tworzenie obiektów na podstawie klas - instancja klasy - klasa jest wzorem jak piecz¹tka - instancja jest kolorem
@@ -31,8 +33,8 @@ public class Main {
 		
 		// 4. Dziedziczenie - nie trzeba redefiniowaæ ca³ej funkcjonalnoœci, ale tylko tê, której nie ma obiekt ogólniejszy
 		Car alfaRomeo = new Car(4, "Alfa Romeo Gulia GTA", "Antoni Wiliñski");
-		System.out.println(alfaRomeo.getType());
-		alfaRomeo.getModel();
+		System.out.println(alfaRomeo.getMaxPassangers());
+		alfaRomeo.setOwner("Neo");
 		
 		// IMPERATYWNE
 		// Programy imperatywne sk³adaj¹ siê z ci¹gu komend do wykonania przez komputer
@@ -40,10 +42,13 @@ public class Main {
 		// FUNKCYJNE
 		// W programowaniu funkcyjnym raz zdefiniowana funkcja zawsze zwraca tê sam¹ wartoœæ dla danych wartoœci argumentów.
 		
+		
 		// Rzeczy prawdopodobnie problematyczne
 		// Sortowanie b¹belkowe
 		double[] arr = new double[] { 13.2, 19.6, 11, -5, 22, -15 };
-		int n = arr.length;  
+		printTable(arr);
+		System.out.println("-----------------");
+		int n = arr.length;
 		double temp = 0;
 		for (int i = 0; i < n; i++) {
 			for (int j = 1; j < (n - i); j++) {
@@ -53,9 +58,10 @@ public class Main {
 					arr[j - 1] = arr[j];
 					arr[j] = temp;
 				}
-
 			}
 		}
+		printTable(arr);
+		
 		
 		// Szukanie minimum i maksimum
 		double[] tablicaMinMax = new double[] { -14, -3.14, 22.81, 4, 28.69, 11.9, -5.12 };
@@ -78,6 +84,7 @@ public class Main {
 		int[] tab1 = new int[1];
 		int tab2[] = new int[1];
 		
+		
 		// Statycznie sortuje tablicê double / int / float itd
 		Arrays.sort(tablicaMinMax);
 		
@@ -94,11 +101,28 @@ public class Main {
 		// U¿ycie listy - nie trzeba martwiæ siê o indeksy ani o rozmiar :)
 		ArrayList<String> najlepszeWyrazy = new ArrayList<>();
 		najlepszeWyrazy.addAll(Arrays.asList("Witajcie", "Przybysze"));
+		najlepszeWyrazy.get(0);
+		najlepszeWyrazy.add("z planety Wuhan");
+		najlepszeWyrazy.remove("Witajcie");
+		
+		int minAge = 10;
+		HashMap<Integer, String> dziennik = new HashMap<Integer, String>();
+		dziennik.put(1, "Tomek");
+		dziennik.put(2, "Micha³");
+		
+		dziennik.get(0);
+		//HashMap<Car, String> dziennikCar = new HashMap<Car, String>();
 		
 		
 		// Materia³y dodatkowe:
-		// Ksi¹¿ka "Czysty Kod" Robert C. Martin (rozdzia³y przede wszystkim 2, potem 5, 10, 12, 14, 16)  
+		// Ksi¹¿ka "Czysty Kod" Robert C. Martin (rozdzia³y przede wszystkim 2, potem 5, 10, 12, 14, 16) 
 		// Java OOP tutorial na W3Schools: https://www.w3schools.com/java/java_oop.asp
+	}
+	
+	public static void printTable(double[] tablica) {
+		for(double element : tablica) {
+			System.out.println(element);
+		}
 	}
 
 }
