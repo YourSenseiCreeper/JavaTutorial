@@ -1,4 +1,4 @@
-package pl.gastherr;
+package pl.gastherr.cw1_paradygmaty;
 
 public class Vehicle {
 	

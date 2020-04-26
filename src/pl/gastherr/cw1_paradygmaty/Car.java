@@ -1,4 +1,4 @@
-package pl.gastherr;
+package pl.gastherr.cw1_paradygmaty;
 
 /**
  * Class of Car, extends Vehicle

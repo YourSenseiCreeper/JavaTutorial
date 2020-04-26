@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import pl.gastherr.Car;
+import pl.gastherr.cw1_paradygmaty.Car;
 
 public class DaneZPliku {
 

@@ -1,4 +1,4 @@
-package pl.gastherr;
+package pl.gastherr.cw1_paradygmaty;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +22,7 @@ public class Main {
 		// Kontrola nad dostêpem do danych
 		// Mo¿emy pobieraæ dane, ale (w tym wypadku) nie mo¿emy ich modyfikowaæ
 		String boatType = boat.getType();
+		boat.getType();
 		
 		// 3. Polimorfizm - poli - wiele - morfizm - postaæ = wielopostaciowoœæ
 		// Metody o tej samej nazwie, ale ró¿nych argumentach
@@ -106,13 +107,13 @@ public class Main {
 		najlepszeWyrazy.remove("Witajcie");
 		
 		int minAge = 10;
+		int[][] nieDziennik = new int[10][10];
 		HashMap<Integer, String> dziennik = new HashMap<Integer, String>();
 		dziennik.put(1, "Tomek");
 		dziennik.put(2, "Micha³");
 		
 		dziennik.get(0);
 		//HashMap<Car, String> dziennikCar = new HashMap<Car, String>();
-		
 		
 		// Materia³y dodatkowe:
 		// Ksi¹¿ka "Czysty Kod" Robert C. Martin (rozdzia³y przede wszystkim 2, potem 5, 10, 12, 14, 16) 
